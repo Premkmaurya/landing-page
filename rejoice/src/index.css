@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: SuisseIntl;
+    url:("../assets/font/fonnts.com-Suisse_Intl_Regular.ttf");
+}
+
+*{
+    font-family: SuisseIntl-Light;
+}
