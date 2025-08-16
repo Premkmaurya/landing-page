@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+    font-family: a;
+    src: url(./jost-variable.ttf);
+}
+@font-face {
+    font-family: b;
+    src: url(./KFOlCnqEu92Fr1MmEU9fBBc4\ \(1\).ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(./KFOmCnqEu92Fr1Mu4mxK\ \(1\).ttf);
+}
+html,body{
+	width: 100vw;
+	min-height: 100vh;
+}
+#main{
+	position: relative;
+}
+.page-1{
+	width: 100vw;
+	height: 100vh;
+	background-color: #0941db;
+	position: relative;
+}
+.page-1-video{
+	position: absolute;
+	top: -4rem;
+	left: -20rem;
+	width: 145vw;
+	height: 120%;
+}
+nav{
+	width: 100%;
+	height: 4rem;
+	padding: 0 2rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 3;
+	font-family: b;
+	justify-content: space-between;
+}
+.nav-img{
+	position: absolute;
+	top: -1rem;
+	width: 7.5rem;
+	height: 4rem;
+}
+.nav-btn{
+	padding: 0.8rem 1.3rem;
+	border: 1px solid white;
+	outline: none;
+	border-radius: 50px;
+	color: white;
+	font-weight: 400;
+	font-size: 0.8rem;
+	background-color: #0c48ed;
+}
+.nav-btn_2{
+	color: white;
+	outline: none;
+	background-color: #0c48ed;
+	border: none;
+	padding: 0.6rem 1.1rem;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border: 1px solid white;
+}
+.page-1-bottom{
+	position: absolute;
+	width: 100%;
+	z-index:  3;
+	bottom:  3rem;
+	left:  8rem;
+	font-family: a;
+	color: white;
+}
+.page-1-bottom>h1{
+	font-size: 4.5rem;
+	line-height: 0.9;
+	text-transform: capitalize;
+	font-weight: 200;
+}
+.page-1-bottom-inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width:  50%;
+	margin-top: 2rem;
+}
+.page-1-bottom-inner>h4{
+	font-weight: 300;
+}
+.page-1-bottom-inner>button{
+    padding: 0.8rem 1.3rem;
+	border: 1px solid white;
+	outline: none;
+	border-radius: 50px;
+	color: #0c48ed;
+	font-weight: 400;
+	font-size: 0.8rem;
+	background-color: #fff;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+
+.page-2{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #0a3bcf;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-family: a;
+    padding: 9vw 8vw;
+}
+.page-2>h2{
+	margin-top: 3vw;
+	font-weight: 300;
+}
+.page-2>h1{
+	width: 88%;
+	font-weight: 300;
+	font-size: 4vw;
+}
+.page-3{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #183bd6;
+}
+.page-3>canvas{
+	max-width: 100vw;
+	max-height: 100vh;
+	position: relative;
+}
