@@ -1,24 +1,25 @@
-import React from 'react'
-import Video from './Video'
+import React from "react";
+import Video from "./Video";
 
 function HomeHeroText() {
   return (
-    <div className='font-[font-v-2] uppercse text-[12vw] pt-5 leading-[9.5vw] font-extralight text-center'>
-      <div>
-        L'étincelle
-      </div>
-      <div className='flex items-center justify-center'>
+    <div className="font-[font-v-2] uppercase text-[8.5vw] leading-[9.5vw] font-extralight text-center">
+      <div>L'étincelle</div>
+      <div className="flex items-center justify-center">
         qui
-        <div className='h-[10vh] rounded-xl overflow-hidden'>
+        <div className="h-[12vh] w-[16vw] rounded-full -pt-5 overflow-hidden">
           <Video />
-          </div>
+        </div>
         génère
       </div>
-      <div>
-        la créativité
+      <div className="flex ml-7 items-center justify-center">
+        la
+        <div className="relative">
+          créativité
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default HomeHeroText
+export default HomeHeroText;

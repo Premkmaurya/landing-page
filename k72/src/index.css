@@ -2,9 +2,12 @@
 
 @font-face {
     font-family: font-v;
-    src: url(../public/font/Lausanne-300.woff2);
+    src: url(../font/Lausanne-300.woff2);
 }
 @font-face {
     font-family: font-v-2;
-    src: url(../public/font/Lausanne-500.woff2);
+    src: url(../font/Lausanne-500.woff2);
+}
+body{
+    overflow-x: hidden;
 }
