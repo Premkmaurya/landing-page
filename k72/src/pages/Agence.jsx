@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
+
 function Agence() {
   const imgRef = useRef(null)
   const imgDivRef = useRef(null);
@@ -33,10 +34,15 @@ function Agence() {
     gsap.to(imgDivRef.current, {
       scrollTrigger: {  // 👈 lowercase s
         trigger: imgDivRef.current,
-        start: "top 30%",
-        end: "top -95%",
-        scrub: true,
+        start: "top 20%",
+        end: "top -125%",
         pin: true,
+        pinSpacing:true,
+        pinReparent:true,
+        pinType:'transform',
+        scrub:1,
+        antiPathPin:1,
+        invalidateOnRefresh:true,
         onUpdate:function (e) {
           const imgIndex = Math.floor(e.progress*imgSrc.length)
           if(e.progress < 1){
