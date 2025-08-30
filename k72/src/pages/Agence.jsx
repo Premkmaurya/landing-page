@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/all";
 function Agence() {
   const imgRef = useRef(null)
   const imgDivRef = useRef(null);
+  
 
   gsap.registerPlugin(ScrollTrigger);
 

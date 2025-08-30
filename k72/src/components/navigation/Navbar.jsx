@@ -1,11 +1,23 @@
-import React,{useRef} from 'react'
+import React,{useRef,useState,useContext} from 'react'
 import gsap from 'gsap'
+import { RxCross1 } from "react-icons/rx";
 
 function Navbar() {
 	const hoverRef = useRef(null)
+	const lineRef = useRef(null)
 	const lineFirRef = useRef(null)
 	const lineSecRef = useRef(null)
- 
+	const hamburgerRef = useRef(null)
+	const crossIconRef = useRef(null)
+
+	// const clickHandler = () =>{
+	// 	hoverRef.current.style.display = "none"
+	// 	lineRef.current.style.display = "none"
+   //    crossIconRef.current.style.display = "block"
+	// }
+   
+
+
 	return (
 		<div className="flex fixed top-0 z-20 w-full items-start
 			justify-between">
@@ -29,9 +41,12 @@ function Navbar() {
             }}
          	className="w-[16vw] h-[7vh] relative bg-black flex items-center justify-center">
          	<div ref={hoverRef} className="bg-[#D3FD50] transition-all absolute top-0 w-full h-0"></div>
-         	<div className="flex relative z-3 w-[60%] flex-col items-end gap-1 justify-end">
-         		<div ref={lineFirRef} className="bg-white h-[0.1rem] w-[5vw] "></div>
-         	    <div ref={lineSecRef} className="bg-white h-[0.1rem] w-[2vw] "></div>
+         	<div ref={hamburgerRef} className="flex relative z-3 w-[60%] flex-col items-end gap-1 text-white justify-end">
+         		<RxCross1 ref={crossIconRef} className="hidden w-20" size={75} color={'white'} />
+         		<div ref={lineRef} className="flex flex-col gap-1 items-end">
+         			<div ref={lineFirRef} className="transition-all bg-white h-[0.1rem] w-[5vw] "></div>
+         	    <div ref={lineSecRef} className="transition-all bg-white h-[0.1rem] w-[2vw] "></div>
+         		</div>
          	</div>
          </div>
 		</div>

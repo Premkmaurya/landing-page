@@ -5,13 +5,12 @@ import App from './App.jsx'
 import {BrowserRouter} from 'react-router-dom'
 import Stair from './components/common/Stair'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <BrowserRouter>
-    <Stair>
-      <App />
-    </Stair>
+      <Stair>
+        <App />
+      </Stair>
   </BrowserRouter>
   </StrictMode>,
 )

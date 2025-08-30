@@ -7,7 +7,6 @@ function Stair(props) {
     const stairDivRef = useRef(null)
     const pageRef = useRef(null)
     const locate = useLocation().pathname;
-    console.log(locate)
 
     useGSAP(()=>{
     	const tl = gsap.timeline();
