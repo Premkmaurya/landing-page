@@ -40,7 +40,7 @@ function Stair(props) {
 
 	return (
 		<>
-		<div ref={stairDivRef} className="h-screen w-screen fixed z-20 top-0">
+		<div ref={stairDivRef} className="h-screen w-screen fixed z-60 top-0">
 				<div className="h-full w-full flex">
 					<div className="stair h-full w-1/5 bg-black"></div>
 					<div className="stair h-full w-1/5 bg-black"></div>
