@@ -34,9 +34,7 @@ function Navbar() {
             	hoverRef.current.style.height = "0%"
             }}
             onClick={()=>{
-            	console.log(open)
             	setOpen(true)
-            	console.log(open)
             }}
          	className="w-[16vw] h-[7vh] relative bg-black flex items-center justify-center">
          	<div ref={hoverRef} className="bg-[#D3FD50] transition-all absolute top-0 w-full h-0"></div>
