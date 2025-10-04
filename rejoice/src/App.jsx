@@ -3,21 +3,11 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Nav from "./components/Nav";
 import Video from "./components/Video";
-import Lenis from 'lenis'
 
 
 const App = () => {
   const coverRef = useRef(null);
   const contentRef = useRef(null);
-  const lenis = new Lenis({
-  autoRaf: true,
-  lerp:0.1,
-  duration: 1.2
-});
-
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
 
   useGSAP(() => {
     const headings = coverRef.current.querySelectorAll("h3");
