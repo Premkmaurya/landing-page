@@ -3,11 +3,11 @@ import Video from "./Video";
 
 function HomeHeroText() {
   return (
-    <div className="font-[font-v-2] uppercase mt-[12vw] text-[12vw] md:text-[8.5vw] leading-[9.5vw] font-extralight text-center">
+    <div className="font-[font-v-2] uppercase mt-[8rem] lg:mt-0 text-[12vw] md:text-[8.5vw] leading-[9.5vw] font-extralight text-center">
       <div>L'étincelle</div>
       <div className="flex items-center justify-center">
         qui
-        <div className="w-[20vw] h-[10vh] md:h-[12vh] md:w-[16vw] rounded-full -pt-5 overflow-hidden">
+        <div className="w-[25vw] h-[8vh] md:h-[12vh] md:w-[16vw] rounded-full -pt-5 overflow-hidden">
           <Video />
         </div>
         génère

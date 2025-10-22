@@ -61,7 +61,7 @@ function Agence() {
         <div>
           <div
             ref={imgDivRef}
-            className="absolute z-2 overflow-hidden h-[38vh] w-[14vw] top-[12vw] left-[30vw] rounded-2xl"
+            className="absolute z-2 overflow-hidden w-[29vw] w-[30vw] top-[50vw] left-[20vw] md:h-[38vh] md:w-[14vw] md:top-[12vw] md:left-[30vw] rounded-2xl"
           >
             <img
               ref={imgRef}
@@ -70,13 +70,13 @@ function Agence() {
               alt=""
             />
           </div>
-          <div className="mt-[55vh]">
+          <div className="mt-[40vh] md:mt-[55vh]">
             <h1 className="relative z-3 bg-transparent text-[18vw] uppercase text-center font-[font-v] leading-[17vw]">
               Soixan7e <br />
               Douze
             </h1>
             <div className="pl-[50%] w-[96vw] mt-20">
-              <p className="text-3xl">
+              <p className="text-md md:text-3xl">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Notre curiosité nourrit notre créativité. On reste humbles et on
                 dit non aux gros egos, même le vôtre. Une marque est vivante.
