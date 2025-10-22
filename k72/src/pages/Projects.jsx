@@ -70,7 +70,6 @@ function Projects() {
     			trigger:".cardParent",
     			start:"top 100%",
     			end:"top -250%",
-    			markers:true,
     			scrub:true
     		}
     	})
@@ -81,12 +80,12 @@ function Projects() {
 	return (
 		<div>
 		   <div className="pt-[45vh]">
-		   	<h1 className="font-[font-v-2] uppercase text-[9rem] relative">Projets<sup className="text-[2rem] absolute top-12">16</sup></h1>
+		   	<h1 className="font-[font-v-2] uppercase text-[5rem] lg:text-[9rem] relative">Projets<sup className="text-[1.4rem] lg:text-[2rem] absolute top-10 lg:top-12">16</sup></h1>
 		   </div>
 		   <div>
 		   	 <div className="cardParent">
 		   	 {img.map(function (e,i) {
-		   	 	return <div key={i} className="card w-full h-[350px] px-3 mb-4 flex gap-2"> 
+            	return <div key={i} className="card w-full h-[350px] px-3 mb-4 flex flex-col lg:flex-row gap-2"> 
 		   	 		<ProjectCard image={e} />
 		   	 	</div>
 		   	 	})}
