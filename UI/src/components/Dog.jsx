@@ -60,31 +60,47 @@ const Dog = () => {
     }
   });
 
-  const dogRef = useRef(model)
+  const dogRef = useRef(model);
 
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
 
-  useGSAP(()=>{
+  useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        startTrigger:"#section-1",
-        endTrigger:"#section-3",
-        start:"top top",
-        end:"bottom bottom",
-        scrub:true,
-        markers:true,
-      }
-    })
+        startTrigger: "#section-1",
+        endTrigger: "#section-3",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
 
     tl.to(dogRef.current.scene.position, {
-      z:"-=0.6",
-      y:"+=0.1",
+      z: "-=0.6",
+      y: "+=0.1",
     })
-    .to(dogRef.current.scene.rotation, {
-      x:`+=${Math.PI / 18}`,
-    })
-  },[])
+      .to(dogRef.current.scene.rotation, {
+        x: `+=${Math.PI / 18}`,
+      })
+      .to(
+        dogRef.current.scene.rotation,
+        {
+          y: `-=${Math.PI}`,
+          x: `-=${Math.PI / 18}`,
+        },
+        "third"
+      )
+      .to(
+        dogRef.current.scene.position,
+        {
+          x: "-=0.4",
+          y: "-=0.05",
+          z: "+=0.55",
+        },
+        "third"
+      );
+  }, []);
 
   return (
     <>

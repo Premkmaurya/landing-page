@@ -8,20 +8,240 @@ html,
 body,
 #root {
   width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #13151a;
+  color: whitesmoke;
 }
 
 main {
   position: relative;
 }
 
+#canvas::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(/public/background-l.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 section {
   width: 100%;
   min-height: 100vh;
-  border: 2px solid white;
   position: relative;
   z-index: 2;
 }
 
+#section-1 {
+  --gap: 2.5rem;
+  position: relative;
 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    .nav-elem:nth-child(2) {
+      i {
+        color: red;
+        font-size: 1rem;
+      }
+    }
+    svg {
+      max-width: 8rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .middle {
+    display: flex;
+    gap: var(--gap);
+    width: 100%;
+    .left-section {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      h1 {
+        text-align: right;
+        font-size: 4.5rem;
+        line-height: 1.2;
+      }
+    }
+    .right-section {
+      width: 50%;
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    .left-section {
+      width: 50%;
+    }
+    .right-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        width: 65%;
+        line-height: 1.3;
+        font-weight: 300;
+      }
+      .description {
+        font-size: 1rem;
+        color: #bbbbbb85;
+        width: 65%;
+        line-height: 1.5;
+        margin-bottom: 1.3rem;
+      }
+      .links {
+        display: flex;
+        gap: 0.5rem;
+        span {
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .first-line {
+    position: absolute;
+    height: 1px;
+    width: 45%;
+    background-color: rgba(255, 0, 0, 0.315);
+    transform: rotate(50deg) translate(-10rem, -13rem);
+  }
+  .second-line {
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    background-color: rgba(255, 0, 0, 0.315);
+    transform: rotate(-45deg) translate(50vw, 10rem);
+  }
+}
+
+#section-2 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem 6rem;
+  p {
+    text-align: left;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-block: 5rem;
+    font-weight: 400;
+  }
+  .projects {
+    width: 100%;
+    .project {
+      color: #bbbbbb85;
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        color: whitesmoke;
+      }
+      small {
+        padding-top: 1.3rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 4.6rem;
+        font-weight: 300;
+        line-height: 1;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+main:has(#section-2 .project:hover) #canvas::after {
+  opacity: 0;
+}
+
+.images {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+}
+
+main:has(#section-2 .project[img-title="tomorrowland"]:hover)
+  .images
+  #tomorrowland {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .project[img-title="navy-pier"]:hover) .images #navy-pier {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .project[img-title="msi-chicago"]:hover)
+  .images
+  #msi-chicago {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .project[img-title="louises-phone"]:hover)
+  .images
+  #louises-phone {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .project[img-title="kikk-festival-2018"]:hover)
+  .images
+  #kikk-festival-2018 {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .project[img-title="the-kennedy-center"]:hover)
+  .images
+  #the-kennedy-center {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .project[img-title="royal-opera"]:hover)
+  .images
+  #royal-opera {
+  opacity: 1;
+  background-color: rgba(168, 5, 5, 0.76);
+}
