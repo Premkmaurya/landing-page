@@ -187,7 +187,34 @@ const App = () => {
             })}
           </div>
         </section>
-        <section id="section-3"></section>
+        <section id="section-3">
+          <div className="top">
+            <div className="left">
+              <h2>
+                Lorem ipsum dolor, <br />
+                sit amet cons <br />
+                elit. Id doloribus <br />
+                modi recusandae!
+              </h2>
+            </div>
+            <div className="right"></div>
+          </div>
+        </section>
+        <section id="section-4">
+          <div className="left"></div>
+          <div className="right">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+              accusantium. Quis ut reprehenderit, laboriosam veniam dolorum
+              aliquam voluptatibus exercitationem ipsam?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+              accusantium. Quis ut reprehenderit, laboriosam veniam dolorum
+              aliquam voluptatibus exercitationem ipsam?
+            </p>
+          </div>
+        </section>
       </main>
     </>
   );
