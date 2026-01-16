@@ -98,7 +98,7 @@ const Dog = () => {
   });
 
   const branchMaterial = new THREE.MeshMatcapMaterial({
-    map: branchMap,
+    matcap: branchMap,
     normalMap: branchNormalMap,
   });
 
